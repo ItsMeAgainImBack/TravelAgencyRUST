@@ -1,0 +1,19 @@
+[package]
+name = "travel_agency"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-cors = "0.6.5"
+actix-web = "4.4.0"
+# a versão precisa ser a 0.3.0  para não conflitar com a versão de dependencia do sqlx
+bigdecimal = { version = "0.3.0", features = ["serde"] }
+chrono = { version = "0.4.31", features = ["serde"] }
+serde = { version = "1.0.193", features = ["derive"] }
+sqlx = { version = "0.7.3", features = ["runtime-async-std-native-tls", "postgres", "chrono", "bigdecimal", "uuid"] }
+thiserror = "1.0.51"
+async-trait = "0.1.75"
+uuid = { version = "1.6.1", features = ["v4", "serde"] }
+dotenv = "0.15.0"
